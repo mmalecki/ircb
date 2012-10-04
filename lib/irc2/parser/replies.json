@@ -1,0 +1,474 @@
+{
+  "200": {
+    "name": "RPL_TRACELINK",
+    "type": "response"
+  },
+  "201": {
+    "name": "RPL_TRACECONNECTING",
+    "type": "response"
+  },
+  "202": {
+    "name": "RPL_TRACEHANDSHAKE",
+    "type": "response"
+  },
+  "203": {
+    "name": "RPL_TRACEUNKNOWN",
+    "type": "response"
+  },
+  "204": {
+    "name": "RPL_TRACEOPERATOR",
+    "type": "response"
+  },
+  "205": {
+    "name": "RPL_TRACEUSER",
+    "type": "response"
+  },
+  "206": {
+    "name": "RPL_TRACESERVER",
+    "type": "response"
+  },
+  "208": {
+    "name": "RPL_TRACENEWTYPE",
+    "type": "response"
+  },
+  "211": {
+    "name": "RPL_STATSLINKINFO",
+    "type": "response"
+  },
+  "212": {
+    "name": "RPL_STATSCOMMANDS",
+    "type": "response"
+  },
+  "213": {
+    "name": "RPL_STATSCLINE",
+    "type": "response"
+  },
+  "214": {
+    "name": "RPL_STATSNLINE",
+    "type": "response"
+  },
+  "215": {
+    "name": "RPL_STATSILINE",
+    "type": "response"
+  },
+  "216": {
+    "name": "RPL_STATSKLINE",
+    "type": "response"
+  },
+  "218": {
+    "name": "RPL_STATSYLINE",
+    "type": "response"
+  },
+  "219": {
+    "name": "RPL_ENDOFSTATS",
+    "type": "response"
+  },
+  "221": {
+    "name": "RPL_UMODEIS",
+    "type": "response"
+  },
+  "235": {
+    "name": "RPL_SERVLISTEND",
+    "type": "response"
+  },
+  "241": {
+    "name": "RPL_STATSLLINE",
+    "type": "response"
+  },
+  "242": {
+    "name": "RPL_STATSUPTIME",
+    "type": "response"
+  },
+  "243": {
+    "name": "RPL_STATSOLINE",
+    "type": "response"
+  },
+  "244": {
+    "name": "RPL_STATSHLINE",
+    "type": "response"
+  },
+  "251": {
+    "name": "RPL_LUSERCLIENT",
+    "type": "response"
+  },
+  "252": {
+    "name": "RPL_LUSEROP",
+    "type": "response"
+  },
+  "253": {
+    "name": "RPL_LUSERUNKNOWN",
+    "type": "response"
+  },
+  "254": {
+    "name": "RPL_LUSERCHANNELS",
+    "type": "response"
+  },
+  "255": {
+    "name": "RPL_LUSERME",
+    "type": "response"
+  },
+  "256": {
+    "name": "RPL_ADMINME",
+    "type": "response"
+  },
+  "259": {
+    "name": "RPL_ADMINEMAIL",
+    "type": "response"
+  },
+  "261": {
+    "name": "RPL_TRACELOG",
+    "type": "response"
+  },
+  "300": {
+    "name": "RPL_NONE",
+    "type": "response"
+  },
+  "301": {
+    "name": "RPL_AWAY",
+    "type": "response"
+  },
+  "302": {
+    "name": "RPL_USERHOST",
+    "type": "response"
+  },
+  "303": {
+    "name": "RPL_ISON",
+    "type": "response"
+  },
+  "305": {
+    "name": "RPL_UNAWAY",
+    "type": "response"
+  },
+  "306": {
+    "name": "RPL_NOWAWAY",
+    "type": "response"
+  },
+  "311": {
+    "name": "RPL_WHOISUSER",
+    "type": "response"
+  },
+  "312": {
+    "name": "RPL_WHOISSERVER",
+    "type": "response"
+  },
+  "313": {
+    "name": "RPL_WHOISOPERATOR",
+    "type": "response"
+  },
+  "314": {
+    "name": "RPL_WHOWASUSER",
+    "type": "response"
+  },
+  "315": {
+    "name": "RPL_ENDOFWHO",
+    "type": "response"
+  },
+  "317": {
+    "name": "RPL_WHOISIDLE",
+    "type": "response"
+  },
+  "318": {
+    "name": "RPL_ENDOFWHOIS",
+    "type": "response"
+  },
+  "319": {
+    "name": "RPL_WHOISCHANNELS",
+    "type": "response"
+  },
+  "321": {
+    "name": "RPL_LISTSTART",
+    "type": "response"
+  },
+  "322": {
+    "name": "RPL_LIST",
+    "type": "response"
+  },
+  "323": {
+    "name": "RPL_LISTEND",
+    "type": "response"
+  },
+  "324": {
+    "name": "RPL_CHANNELMODEIS",
+    "type": "response"
+  },
+  "331": {
+    "name": "RPL_NOTOPIC",
+    "type": "response"
+  },
+  "332": {
+    "name": "RPL_TOPIC",
+    "type": "response"
+  },
+  "341": {
+    "name": "RPL_INVITING",
+    "type": "response"
+  },
+  "342": {
+    "name": "RPL_SUMMONING",
+    "type": "response"
+  },
+  "351": {
+    "name": "RPL_VERSION",
+    "type": "response"
+  },
+  "352": {
+    "name": "RPL_WHOREPLY",
+    "type": "response"
+  },
+  "353": {
+    "name": "RPL_NAMREPLY",
+    "type": "response"
+  },
+  "364": {
+    "name": "RPL_LINKS",
+    "type": "response"
+  },
+  "365": {
+    "name": "RPL_ENDOFLINKS",
+    "type": "response"
+  },
+  "366": {
+    "name": "RPL_ENDOFNAMES",
+    "type": "response"
+  },
+  "367": {
+    "name": "RPL_BANLIST",
+    "type": "response"
+  },
+  "368": {
+    "name": "RPL_ENDOFBANLIST",
+    "type": "response"
+  },
+  "369": {
+    "name": "RPL_ENDOFWHOWAS",
+    "type": "response"
+  },
+  "371": {
+    "name": "RPL_INFO",
+    "type": "response"
+  },
+  "372": {
+    "name": "RPL_MOTD",
+    "type": "response"
+  },
+  "374": {
+    "name": "RPL_ENDOFINFO",
+    "type": "response"
+  },
+  "375": {
+    "name": "RPL_MOTDSTART",
+    "type": "response"
+  },
+  "376": {
+    "name": "RPL_ENDOFMOTD",
+    "type": "response"
+  },
+  "381": {
+    "name": "RPL_YOUREOPER",
+    "type": "response"
+  },
+  "382": {
+    "name": "RPL_REHASHING",
+    "type": "response"
+  },
+  "391": {
+    "name": "RPL_TIME",
+    "type": "response"
+  },
+  "392": {
+    "name": "RPL_USERSSTART",
+    "type": "response"
+  },
+  "393": {
+    "name": "RPL_USERS",
+    "type": "response"
+  },
+  "394": {
+    "name": "RPL_ENDOFUSERS",
+    "type": "response"
+  },
+  "395": {
+    "name": "RPL_NOUSERS",
+    "type": "response"
+  },
+  "401": {
+    "name": "ERR_NOSUCHNICK",
+    "type": "response"
+  },
+  "402": {
+    "name": "ERR_NOSUCHSERVER",
+    "type": "response"
+  },
+  "403": {
+    "name": "ERR_NOSUCHCHANNEL",
+    "type": "response"
+  },
+  "404": {
+    "name": "ERR_CANNOTSENDTOCHAN",
+    "type": "response"
+  },
+  "405": {
+    "name": "ERR_TOOMANYCHANNELS",
+    "type": "response"
+  },
+  "406": {
+    "name": "ERR_WASNOSUCHNICK",
+    "type": "response"
+  },
+  "407": {
+    "name": "ERR_TOOMANYTARGETS",
+    "type": "response"
+  },
+  "409": {
+    "name": "ERR_NOORIGIN",
+    "type": "response"
+  },
+  "411": {
+    "name": "ERR_NORECIPIENT",
+    "type": "response"
+  },
+  "412": {
+    "name": "ERR_NOTEXTTOSEND",
+    "type": "response"
+  },
+  "413": {
+    "name": "ERR_NOTOPLEVEL",
+    "type": "response"
+  },
+  "414": {
+    "name": "ERR_WILDTOPLEVEL",
+    "type": "response"
+  },
+  "421": {
+    "name": "ERR_UNKNOWNCOMMAND",
+    "type": "response"
+  },
+  "422": {
+    "name": "ERR_NOMOTD",
+    "type": "response"
+  },
+  "423": {
+    "name": "ERR_NOADMININFO",
+    "type": "response"
+  },
+  "424": {
+    "name": "ERR_FILEERROR",
+    "type": "response"
+  },
+  "431": {
+    "name": "ERR_NONICKNAMEGIVEN",
+    "type": "response"
+  },
+  "432": {
+    "name": "ERR_ERRONEUSNICKNAME",
+    "type": "response"
+  },
+  "433": {
+    "name": "ERR_NICKNAMEINUSE",
+    "type": "response"
+  },
+  "436": {
+    "name": "ERR_NICKCOLLISION",
+    "type": "response"
+  },
+  "441": {
+    "name": "ERR_USERNOTINCHANNEL",
+    "type": "response"
+  },
+  "442": {
+    "name": "ERR_NOTONCHANNEL",
+    "type": "response"
+  },
+  "443": {
+    "name": "ERR_USERONCHANNEL",
+    "type": "response"
+  },
+  "444": {
+    "name": "ERR_NOLOGIN",
+    "type": "response"
+  },
+  "445": {
+    "name": "ERR_SUMMONDISABLED",
+    "type": "response"
+  },
+  "446": {
+    "name": "ERR_USERSDISABLED",
+    "type": "response"
+  },
+  "451": {
+    "name": "ERR_NOTREGISTERED",
+    "type": "response"
+  },
+  "461": {
+    "name": "ERR_NEEDMOREPARAMS",
+    "type": "response"
+  },
+  "462": {
+    "name": "ERR_ALREADYREGISTRED",
+    "type": "response"
+  },
+  "463": {
+    "name": "ERR_NOPERMFORHOST",
+    "type": "response"
+  },
+  "464": {
+    "name": "ERR_PASSWDMISMATCH",
+    "type": "response"
+  },
+  "465": {
+    "name": "ERR_YOUREBANNEDCREEP",
+    "type": "response"
+  },
+  "467": {
+    "name": "ERR_KEYSET",
+    "type": "response"
+  },
+  "471": {
+    "name": "ERR_CHANNELISFULL",
+    "type": "response"
+  },
+  "472": {
+    "name": "ERR_UNKNOWNMODE",
+    "type": "response"
+  },
+  "473": {
+    "name": "ERR_INVITEONLYCHAN",
+    "type": "response"
+  },
+  "474": {
+    "name": "ERR_BANNEDFROMCHAN",
+    "type": "response"
+  },
+  "475": {
+    "name": "ERR_BADCHANNELKEY",
+    "type": "response"
+  },
+  "481": {
+    "name": "ERR_NOPRIVILEGES",
+    "type": "response"
+  },
+  "482": {
+    "name": "ERR_CHANOPRIVSNEEDED",
+    "type": "response"
+  },
+  "483": {
+    "name": "ERR_CANTKILLSERVER",
+    "type": "response"
+  },
+  "491": {
+    "name": "ERR_NOOPERHOST",
+    "type": "response"
+  },
+  "492": {
+    "name": "ERR_NOSERVICEHOST",
+    "type": "response"
+  },
+  "501": {
+    "name": "ERR_UMODEUNKNOWNFLAG",
+    "type": "response"
+  },
+  "502": {
+    "name": "ERR_USERSDONTMATCH",
+    "type": "response"
+  }
+}

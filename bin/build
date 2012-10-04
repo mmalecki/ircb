@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+// You didn't think I'd write lib/irc2/parser/replies.json by hand, did you?
+var fs = require('fs'),
+    http = require('http'),
+    path = require('path');
+
+http.get('http://www.ietf.org/rfc/rfc1459.txt', function (res) {
+  var data = '';
+
+  if (res.statusCode !== 200) {
+    console.error('Status code: ' + res.statusCode);
+    return res.on('end', function () {
+      process.exit(1);
+    }).pipe(process.stdout);
+  }
+
+  res.on('data', function (chunk) {
+    data += chunk.toString('utf8');
+  });
+
+  res.on('end', function () {
+    var obj = {},
+        matches = [],
+        r = /^\s+([0-9]{3})\s+((RPL|ERR)_[A-Z]+)$/;
+
+    data.split('\n').forEach(function (line) {
+      var match = line.match(r);
+      if (match) {
+        matches.push(match);
+      }
+    });
+
+    matches.forEach(function (match) {
+      obj[match[1]] = {
+        name: match[2],
+        type: match[1] === 'ERR' ? 'error' : 'response'
+      };
+    });
+
+    fs.writeFile(
+      path.join(__dirname, '..', 'lib/irc2/parser/replies.json'),
+      JSON.stringify(obj, null, '  ') + '\n',
+      function (err) {
+        if (err) {
+          console.error('Error while writing `replies.json`: ' + err.message);
+          process.exit(2);
+        }
+      }
+    );
+  });
+});

@@ -1,9 +1,10 @@
 {
-  "name": "irc2",
+  "name": "ircb",
   "author": "Maciej Małecki <me@mmalecki.com>",
   "version": "0.0.0",
   "description": "IRC library which *I* like",
   "dependencies": {
     "async": "0.1.x"
-  }
+  },
+  "main": "./lib/ircb"
 }

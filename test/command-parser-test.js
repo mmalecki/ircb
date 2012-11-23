@@ -1,5 +1,5 @@
 var assert = require('assert'),
-    parse = require('../lib/irc2/parser/command-parser');
+    parse = require('../lib/ircb/parser/command-parser');
 
 assert.deepEqual(parse(':lindbohm.freenode.net NOTICE * :*** Found your hostname'), {
   prefix: 'lindbohm.freenode.net',

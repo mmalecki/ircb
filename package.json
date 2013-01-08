@@ -6,5 +6,8 @@
   "dependencies": {
     "async": "0.1.x"
   },
-  "main": "./lib/ircb"
+  "main": "./lib/ircb",
+  "scripts": {
+    "test": "node test/command-parser-test.js"
+  }
 }

@@ -9,5 +9,9 @@
   "main": "./lib/ircb",
   "scripts": {
     "test": "node test/command-parser-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmalecki/ircb.git"
   }
 }

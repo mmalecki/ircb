@@ -39,7 +39,7 @@ irc.say('#node.js', 'hello world');
 ```
 
 #### To a person
-```
+```js
 irc.say('mmalecki', 'hello world');
 ```
 

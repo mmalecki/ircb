@@ -62,7 +62,8 @@ irc.names('#node.js', function (err, names) {
   * `options.rejectUnauthorized` (`boolean`, default: `false`) - reject unauthorized certificates when using TLS
   * `options.nick` (`string`, required) - IRC nick
   * `options.password` (`string`) - IRC password
-  * `options.username` (`string`) - URC username
+  * `options.username` (`string`) - IRC username
+  * `options.realName` (`string`) - IRC real name
   * `options.channels` (`array` of `string`, default: `[]`) - channels to join.
      If specified, calls `callback` after joining all the channels.
 * `callback` (`function`) - called after connecting to IRC, identifying and

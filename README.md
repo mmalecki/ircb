@@ -68,3 +68,12 @@ irc.names('#node.js', function (err, names) {
      If specified, calls `callback` after joining all the channels.
 * `callback` (`function`) - called after connecting to IRC, identifying and
   joining all the channels specified
+
+#### Events
+
+`ircb` returns an event emitter which returns following events:
+
+* `register` - called when instance is connected, identified and joined all the
+  specified channels
+* `error(err)` - called when an error occured
+* `names(channel, names)` - called when a list of names for `channel` is received

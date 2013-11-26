@@ -50,3 +50,20 @@ irc.names('#node.js', function (err, names) {
   console.log('There are ' + names.length + ' people in #node.js channel');
 });
 ```
+
+## API
+
+### ircb(options, callback)
+
+* `options` (`Object`)
+  * `options.host` (`string`) - host to connect to
+  * `options.port` (`number`, default: `options.secure ? 6697 : 6667`) - port to connect to
+  * `options.secure` (`boolean`, default: `false`) - use TLS?
+  * `options.rejectUnauthorized` (`boolean`, default: `false`) - reject unauthorized certificates when using TLS
+  * `options.nick` (`string`, required) - IRC nick
+  * `options.password` (`string`) - IRC password
+  * `options.username` (`string`) - URC username
+  * `options.channels` (`array` of `string`, default: `[]`) - channels to join.
+     If specified, calls `callback` after joining all the channels.
+* `callback` (`function`) - called after connecting to IRC, identifying and
+  joining all the channels specified

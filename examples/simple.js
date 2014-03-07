@@ -6,6 +6,7 @@ var irc = ircb({
   username: 'mycoolbot',
   realName: 'mycoolbot',
   nick: 'mycoolbot',
+  alternateNick: 'mycoolerbot',
   channels: ['#node.js']
 }, function () {
   irc.on('names', function (channel, names) {

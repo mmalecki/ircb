@@ -7,28 +7,33 @@ An IRC library which *I* like.
 
 ### Creating a client
 ```js
+var tls = require('tls');
 var ircb = require('ircb');
 
 var irc = ircb({
-  host: 'irc.freenode.org',
-  secure: true,
-  nick: 'mycoolbot',
-  username: 'mycoolbot',
-  realName: 'mycoolbot',
-  channels: ['#node.js'] // optional
+  username: 'ircbexample',
+  realName: 'ircbexample',
+  nick: 'ircbexample',
+  channels: ['#nodebombrange']
 }, function () {
-  console.log('Connected');
-  console.log('MOTD:\n');
-  console.log(irc.motd);
+  irc.on('names', function (channel, names) {
+    console.log(channel + ': ' + names.join(', '));
+  });
+
+  irc.on('message', function (from, to, msg) {
+    console.log(from, '->', to + ': ' + msg)
+  })
 });
+
+irc.pipe(tls.connect({
+  host: 'chat.freenode.net',
+  port: 6697
+})).pipe(irc);
 ```
 
 ### Joining a channel
 ```js
-irc.join('#node.js', function (err) {
-  if (err) throw err;
-  console.log('Joined #node.js');
-});
+irc.join('#node.js');
 ```
 
 ### Saying stuff
@@ -56,18 +61,20 @@ irc.names('#node.js', function (err, names) {
 ### ircb(options, callback)
 
 * `options` (`Object`)
-  * `options.host` (`string`) - host to connect to
-  * `options.port` (`number`, default: `options.secure ? 6697 : 6667`) - port to connect to
-  * `options.secure` (`boolean`, default: `false`) - use TLS?
-  * `options.rejectUnauthorized` (`boolean`, default: `false`) - reject unauthorized certificates when using TLS
   * `options.nick` (`string`, required) - IRC nick
   * `options.password` (`string`) - IRC password
   * `options.username` (`string`) - IRC username
   * `options.realName` (`string`) - IRC real name
   * `options.channels` (`array` of `string`, default: `[]`) - channels to join.
      If specified, calls `callback` after joining all the channels.
-* `callback` (`function`) - called after connecting to IRC, identifying and
-  joining all the channels specified
+* `callback` (`function`) - called after identifying and joining all the
+  channels specified
+
+Returns a `Duplex` stream, which should be used like that:
+
+```js
+connection.pipe(ircb()).pipe(connection);
+```
 
 #### Events
 

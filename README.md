@@ -71,9 +71,15 @@ irc.names('#node.js', function (err, names) {
 
 #### Events
 
-`ircb` returns an event emitter which returns following events:
+`ircb` returns an event emitter which emits the following events:
 
-* `register` - called when instance is connected, identified and joined all the
+* `register` - emitted when instance is connected, identified and joined all the
   specified channels
-* `error(err)` - called when an error occured
-* `names(channel, names)` - called when a list of names for `channel` is received
+* `message(from, to, message)` - emitted when a message is received
+* `names(channel, names)` - emitted when a list of names for `channel` is received
+* `join(prefix, channel)` - emitted when someone joins a channel. `prefix` is of the format `<nick>!<id>@<host>`
+* `part(prefix, channel, message)` - emitted when someone leaves a channel
+* `kick(prefix, channel, user, reason)` - emitted when someone is kicked from a channel. `prefix` (see above) kicked `user` for a `reason` (defaults to `user` if no reason was given)
+* `motd(text)` - emitted when the message of the day is received
+* `error(err)` - emitted when an error occurred
+* `close(had_error)` - emitted when the socket is fully closed, see [net.Socket](http://nodejs.org/docs/latest/api/all.html#all_event_close_2)

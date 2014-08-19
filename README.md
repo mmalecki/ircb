@@ -88,5 +88,3 @@ connection.pipe(ircb()).pipe(connection);
 * `part(prefix, channel, message)` - emitted when someone leaves a channel
 * `kick(prefix, channel, user, reason)` - emitted when someone is kicked from a channel. `prefix` (see above) kicked `user` for a `reason` (defaults to `user` if no reason was given)
 * `motd(text)` - emitted when the message of the day is received
-* `error(err)` - emitted when an error occurred
-* `close(had_error)` - emitted when the socket is fully closed, see [net.Socket](http://nodejs.org/docs/latest/api/all.html#all_event_close_2)
